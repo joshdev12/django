@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .con {
+        margin: 20px;
+        background-color: brown;
+        height: 100px;
+        width: 300px;
+        color: aliceblue;
+    }
+</style>
+<body>
+    <h1>{{ user }}</h1>
+    <!-- <h1>{{ age }}</h1> -->
+
+    {% for task in tasks %}
+    <div class="con">
+        {{ task.title }}
+        {{ task.desc }}
+        {% if task.status %}
+            <strike>{{ task.time }}</strike>
+        {% else %}
+            <p>{{ task.time }}</p>
+        {% endif %}
+
+
+    </div>
+    {% endfor %}
+    
+    
+</body>
+</html>
